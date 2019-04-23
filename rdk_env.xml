@@ -10,42 +10,13 @@
  <components>
     <default>
      <build_version spin="2" version="3.0.0.0" />
-     <dependencies>sdk_realtek,xwwifi-hal,xwconfig,xwcjson,xwopenssl,xwdropbear,xwsysapps,xwntpclient,xwblelnf,xwconfig-libs,xwconfig-files,sdk,libffi-master,zlib-1.2.8,glib-2.42.2,fcgi,libxml2,curl,openssl,log4c,cjson,rdklogger,sysapps,dca,sysint,lostandfound,wifi-hal-sercomm,msgpack,configMgr,opencv-3.1.0,video-analytics,base64,trower-base64,wdmp-c,nanomsg,wrp-c,libparodus,parodus,dropbear,rtmessage,xwclient,thumbnail,cvr,utility,webpa,nopoll,netsrvmgr,wifi-hal-generic,devicecert,ledmgr,plugins,ems
+     <dependencies>soxr
      </dependencies>
     </default>
   </components>
   <include path="build/build_framework/components/realtek/sdk/rdk_env.xml" />
   <include path="build/build_framework/components/realtek/opensource/rdk_env.xml" />
-  <include path="xw/wifi-hal/rdk_env.xml" />
-  <include path="xw/xwconfig/rdk_env.xml" />
-  <include path="xw/sysapps/rdk_env.xml" />
-  <include path="xw/cpg/build_scripts/xw4/rdk_env.xml" />
-  <include path="xw/lnf/ble/rdk_env.xml" />
-
-  <include path="build/build_framework/components/amba/sdk/rdk_env.xml" />
-  <include path="build/build_framework/components/amba/opensource/rdk_env.xml" />
-  <include path="sysint/devspec/rdk_env.xml" />
-  <include path="rdklogger/rdk_env.xml" />
-  <include path="sysapps/rdk_env.xml" />
-  <include path="xwclient/rdk_env.xml" />
-  <include path="dca/rdk_env.xml" />
-  <include path="webrtc-streaming-node/rdk_env.xml" />
-  <include path="webpa/rdk_env.xml" />
-  <include path="lostandfound/rdk_env.xml" />
-  <include path="wifi-hal-sercomm/rdk_env.xml" />
-  <include path="wifi-hal-generic/rdk_env.xml" />
-  <include path="netsrvmgr/rdk_env.xml" />
-  <include path="plugins/rdk_env.xml" />
-  <include path="gst-plugins/soc/rdk_env.xml" />
-  <include path="video-analytics/rdk_env.xml" />
-  <include path="configMgr/rdk_env.xml" />
-  <include path="thumbnail/rdk_env.xml" />
-  <include path="cvr/rdk_env.xml" />
-  <include path="utility/rdk_env.xml" />
-  <include path="devicecert/rdk_env.xml" />
-  <include path="ledmgr/rdk_env.xml" />
-  <include path="camaudio/rdk_env.xml" />
-  <include path="ems/rdk_env.xml" />
+  
   <packaging_instructions>
     <package name="DEV">
       <script function="xw_create_version" name="xw_create_version" type="python" />
