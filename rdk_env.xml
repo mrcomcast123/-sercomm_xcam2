@@ -1,0 +1,187 @@
+<environment>
+   <BuildVersion Spin="1" Version="0.0.0.0" />
+   <build_version spin="1" version="0.0.0.0" />
+   <paths>
+      <fsroot>sdk/fsroot/ramdisk</fsroot>
+      <toolchain>sdk/toolchain</toolchain>
+   </paths>
+  <SDKConfig>
+  </SDKConfig>
+ <components>
+    <default>
+     <build_version spin="2" version="3.0.0.0" />
+     <dependencies>sdk_realtek,xwwifi-hal,xwconfig,xwcjson,xwopenssl,xwdropbear,xwsysapps,xwntpclient,xwblelnf,xwconfig-libs,xwconfig-files,sdk,libffi-master,zlib-1.2.8,glib-2.42.2,fcgi,libxml2,curl,openssl,log4c,cjson,rdklogger,sysapps,dca,sysint,lostandfound,wifi-hal-sercomm,msgpack,configMgr,opencv-3.1.0,video-analytics,base64,trower-base64,wdmp-c,nanomsg,wrp-c,libparodus,parodus,dropbear,rtmessage,xwclient,thumbnail,cvr,utility,webpa,nopoll,netsrvmgr,wifi-hal-generic,devicecert,ledmgr,plugins,ems
+     </dependencies>
+    </default>
+  </components>
+  <include path="build/build_framework/components/realtek/sdk/rdk_env.xml" />
+  <include path="build/build_framework/components/realtek/opensource/rdk_env.xml" />
+  <include path="xw/wifi-hal/rdk_env.xml" />
+  <include path="xw/xwconfig/rdk_env.xml" />
+  <include path="xw/sysapps/rdk_env.xml" />
+  <include path="xw/cpg/build_scripts/xw4/rdk_env.xml" />
+  <include path="xw/lnf/ble/rdk_env.xml" />
+
+  <include path="build/build_framework/components/amba/sdk/rdk_env.xml" />
+  <include path="build/build_framework/components/amba/opensource/rdk_env.xml" />
+  <include path="sysint/devspec/rdk_env.xml" />
+  <include path="rdklogger/rdk_env.xml" />
+  <include path="sysapps/rdk_env.xml" />
+  <include path="xwclient/rdk_env.xml" />
+  <include path="dca/rdk_env.xml" />
+  <include path="webrtc-streaming-node/rdk_env.xml" />
+  <include path="webpa/rdk_env.xml" />
+  <include path="lostandfound/rdk_env.xml" />
+  <include path="wifi-hal-sercomm/rdk_env.xml" />
+  <include path="wifi-hal-generic/rdk_env.xml" />
+  <include path="netsrvmgr/rdk_env.xml" />
+  <include path="plugins/rdk_env.xml" />
+  <include path="gst-plugins/soc/rdk_env.xml" />
+  <include path="video-analytics/rdk_env.xml" />
+  <include path="configMgr/rdk_env.xml" />
+  <include path="thumbnail/rdk_env.xml" />
+  <include path="cvr/rdk_env.xml" />
+  <include path="utility/rdk_env.xml" />
+  <include path="devicecert/rdk_env.xml" />
+  <include path="ledmgr/rdk_env.xml" />
+  <include path="camaudio/rdk_env.xml" />
+  <include path="ems/rdk_env.xml" />
+  <packaging_instructions>
+    <package name="DEV">
+      <script function="xw_create_version" name="xw_create_version" type="python" />
+      <script name="xw/copyPDNSSHKeys.sh" type="shell" />
+      <script name="xw/copysslcerts.sh" type="shell" />
+      <script name="xw/copydropbearcerts.sh" type="shell" />
+      <script name="xw/createImage.sh" type="shell" />
+
+      <script function="create_version" name="create_version" type="python" />
+      <script name="copysslcerts.sh" type="shell" />
+      <script name="copydropbearcerts.sh" type="shell" />
+      <script name="disablepasswd.sh" type="shell" />
+      <script name="cleanup.sh" type="shell" />
+      <script name="createImage.sh" type="shell" />
+     </package>
+    <package name="VBN">
+      <script function="xw_create_version" name="xw_create_version" type="python" />
+      <script name="xw/installsshprod.sh" type="shell" />
+      <script name="xw/copysslcerts.sh" type="shell" />
+      <script name="xw/copydropbearcerts.sh" type="shell" />
+      <script name="xw/cleanup.sh" type="shell" />
+      <script name="xw/createImage.sh" type="shell" />
+
+      <script function="create_version" name="create_version" type="python" />
+      <script name="installsshprod.sh" type="shell" />
+      <script name="copysslcerts.sh" type="shell" />
+      <script name="copydropbearcerts.sh" type="shell" />
+      <script name="cleanup.sh" type="shell" />
+      <script name="createImage.sh" type="shell" />
+     </package>
+     <package name="PROD">
+      <script function="xw_create_version" name="xw_create_version" type="python" />
+      <script name="xw/installsshprod.sh" type="shell" />
+      <script name="xw/copysslcerts.sh" type="shell" />
+      <script name="xw/copydropbearcerts.sh" type="shell" />
+      <script name="xw/cleanup.sh" type="shell" />
+      <script name="xw/createImage.sh" type="shell" />
+
+      <script function="create_version" name="create_version" type="python" />
+      <script name="installsshprod.sh" type="shell" />
+      <script name="copysslcerts.sh" type="shell" />
+      <script name="copydropbearcerts.sh" type="shell" />
+      <script name="cleanup.sh" type="shell" />      
+      <script name="createImage.sh" type="shell" />
+    </package>
+    <package name="VBN-Common">
+       <script function="xw_create_version" name="xw_create_version" type="python" />
+       <script name="xw/installsshprod.sh" type="shell" />
+       <script name="xw/copysslcerts.sh" type="shell" />
+       <script name="xw/copydropbearcerts.sh" type="shell" />
+       <script name="xw/cleanup.sh" type="shell" />
+       <script name="xw/createImage.sh" type="shell" />
+
+       <script function="create_version" name="create_version" type="python" />
+       <script name="installsshprod.sh" type="shell" />
+       <script name="copysslcerts.sh" type="shell" />
+       <script name="copydropbearcerts.sh" type="shell" />
+       <script name="cleanup.sh" type="shell" />
+       <script name="createImage.sh" type="shell" />
+    </package>
+    <package name="DEV">
+       <script name="DEV-Common" type="package_map" />
+    </package>
+ 
+    <package name="NIGHTLY">
+       <script function="creat_fsroot_backup" name="create_fsroot_backup" type="python" />
+       <script function="init_vbn_package" name="init_package" type="python" />
+       <script name="VBN" type="package_map" />
+       <script function="packager_upload" name="deploy" type="python" />
+       <script function="init_prod_package" name="init_package" type="python" />
+       <script name="PROD" type="package_map" />
+       <script function="packager_upload" name="deploy" type="python" />
+    </package>
+
+    <package name="ALL-RELEASE">
+       <script function="creat_fsroot_backup" name="create_fsroot_backup" type="python" />
+       <script function="init_vbn_package" name="init_package" type="python" />
+       <script name="VBN" type="package_map" />
+       <script function="packager_upload" name="deploy" type="python" />
+       <script function="init_prod_package" name="init_package" type="python" />
+       <script name="PROD" type="package_map" />
+       <script function="packager_upload" name="deploy" type="python" />
+    </package>
+    <package name="PROD-RELEASE">
+       <script name="PROD" type="package_map" />
+    </package>
+  
+    <package name="DEV-Common">
+      <script function="xw_create_version" name="xw_create_version" type="python" />
+      <script name="xw/installsshprod.sh" type="shell" />
+      <script name="xw/copysslcerts.sh" type="shell" />
+      <script name="xw/copydropbearcerts.sh" type="shell" />
+      <script name="xw/createImage.sh" type="shell" />
+
+      <script function="create_version" name="create_version" type="python" />
+      <script name="installsshprod.sh" type="shell" />
+      <script name="copysslcerts.sh" type="shell" />
+      <script name="copydropbearcerts.sh" type="shell" />
+      <script name="cleanup.sh" type="shell" />
+      <script name="disablepasswd.sh" type="shell" />
+      <script name="createImage.sh" type="shell" />
+    </package>
+
+    </packaging_instructions>
+  <platform>
+      <device>camera</device>
+      <soc>ambarella</soc>
+      <vendor>sercomm</vendor>
+  </platform>
+  <additional_environs>
+    <environ name="XCAM_MODEL" value="SCHC2" />
+    <environ name="DISABLE_XCAM_WEBPA_MP4" value="TRUE" />
+    <environ name="DISABLE_XCAM_WEBPA_LIBHALRTC" value="TRUE" />
+  </additional_environs>
+  <oem_device model="SCHC2" />
+    <deploy extensions="bin">
+        <cqa image_type="customImages.txt" ip="0.0.0.0" />
+        <vbn image_type="customImages.txt" ip="0.0.0.0" />
+        <dev image_type="customImages.txt" ip="0.0.0.0" />
+        <prod image_type="customImages.txt" ip="0.0.0.0" />
+    </deploy>
+
+   <PrebuiltsComponents>
+    <Component ArtifactId="fsroot" ExcludePattern=".svn" PrebuiltName="SDK">
+      <ArtifactItem Path="sdk/fsroot/fsroot.tgz" />
+    </Component>
+    <Component ArtifactId="toolchain" ExcludePattern=".svn" PrebuiltName="SDK">
+      <ArtifactItem Path="sdk/toolchain/linaro-armv7ahf-2015.11-gcc5.2-x86_64/*.tgz" />
+    </Component>
+  </PrebuiltsComponents>
+  <PrebuiltsRepository MajorVersion="1" Packaging="tgz" RepositoryId="ambarella" Url="https://nexus.teamccp.com/nexus/content/repositories/ambarella/" />
+  <PrebuiltsDependencies>
+      <Prebuilt Name="SDK">
+      <Location Name="COMPONENT-BUILD-SCRIPT" RelativePath="build/components/amba/sdk/rdk_build.sh" Url="ssh://gerrit.teamccp.com:29418/rdk/components/generic/build_framework/devices/sercomm/sercomm_xcam2@master" />
+      <Location Name="COMPONENT-BUILD-SCRIPT" RelativePath="build/components/amba/sdk/rdk_env.xml" Url="ssh://gerrit.teamccp.com:29418/rdk/components/generic/build_framework/devices/sercomm/sercomm_xcam2@master" />
+     </Prebuilt>
+  </PrebuiltsDependencies>
+<DeployPrebuilts Enable="0" Path="prebuilts" />
+</environment>
