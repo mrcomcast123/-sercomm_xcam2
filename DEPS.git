@@ -1,0 +1,14 @@
+sdk_deps = {}
+deps = {
+  'build/build_framework': 'ssh://gerrit.teamccp.com:29418/rdk/components/generic/build_framework/devices/sercomm/sercomm_xcam2@master',
+  'build/sshkeys': 'ssh://gerrit.teamccp.com:29418/rdk/utils/cpc/sshkeys/generic@master',
+  'build/sslcerts': 'ssh://gerrit.teamccp.com:29418/rdk/utils/cpc/sslcerts/generic@master',
+  'opensource/src/log4c': 'ssh://gerrit.teamccp.com:29418/rdk/components/opensource/log4c/generic@1.2.3',
+  'opensource/src/rtmessage': 'ssh://gerrit.teamccp.com:29418/rdk/components/opensource/rtmessage@master',
+  'plugins': 'ssh://gerrit.teamccp.com:29418/rdk/components/generic/plugins/generic@master',
+  'plugins/soc': 'ssh://gerrit.teamccp.com:29418/rdk/components/generic/plugins/soc/ambarella/common@master',
+  'plugins/soc/build': 'ssh://gerrit.teamccp.com:29418/rdk/components/generic/plugins/soc/ambarella/s3l@master',
+}
+shallow_deps = {
+}
+hooks = []
